@@ -1,7 +1,8 @@
 'use strict'
 
+const { json } = require('body-parser');
 const express = require('express');
-const { listUsers, addUser, switchPlan, listSeries, addSerie, play } = require('../models/model');
+const { listUsers, addUser, switchPlan, listSeries, addSerie, play, watchAgain, rateSerie } = require('../models/model');
 // const { response } = require('../app')
 
 const router = express.Router()
@@ -79,6 +80,30 @@ router.get('/play/:serie', (req, res) => {
  } catch (error) {
   res.status(404).json({ error: error.message });
  }
+
+});
+
+router.get("/watchAgain", (req, res) => {
+ const { user } = req.query;
+ 
+ try {
+  res.status(200).json(watchAgain(user));
+ } catch (error) {
+  res.status(404).json({ error: error.message });
+ }
+
+});
+
+router.post('/rating/:serie', (req, res) => {
+  const { serie } = req.params;
+  const { email, score } = req.body;
+
+
+  try {
+    res.status(200).json({ msg: rateSerie(serie, email, score) });
+  } catch (error) {
+    res.status(404).json({ error: error.message });
+  }
 
 });
 

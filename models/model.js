@@ -117,7 +117,7 @@ module.exports = {
       throw Error(`La serie ${nombre.name} ya existe`);
     }
 
-    if(category === "plus" || category === "gold") {
+    if(category !== "regular" && category !== "premium") {
       throw Error(`La categoría ${category} no existe`);
     }
 

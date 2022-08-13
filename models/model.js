@@ -12,7 +12,7 @@ let series = []
 module.exports = {
 
   reset: function () {
-    // No es necesario modificar esta función. La usamos para "limpiar" los arreglos entre test y test.
+    // No es necesario modificar esta función. La usamos para "limpiar" los arreglos entre test y test..
 
     users = []
     series = []

@@ -3,7 +3,7 @@ const expect = require('chai').expect
 const Model = require('../models/model')
 
 
-  describe('---------- `switchPlan` ----------', function () {
+  xdescribe('---------- `switchPlan` ----------', function () {
     beforeEach(function () {
       Model.reset()
     })

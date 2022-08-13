@@ -1,7 +1,7 @@
 const expect = require('chai').expect
 const Model = require('../models/model')
 
-describe('---------- `addUser` y `listUsers` ----------', function () {
+xdescribe('---------- `addUser` y `listUsers` ----------', function () {
     beforeEach(function () {
         Model.reset()
       })

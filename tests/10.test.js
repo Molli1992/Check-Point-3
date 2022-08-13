@@ -2,7 +2,7 @@ const supertest = require('supertest-as-promised')(require('../app'))
 const expect = require('chai').expect
 const model = require('../models/model')
 
-describe('/series/:category', function () {
+xdescribe('/series/:category', function () {
     beforeEach(function () {
         model.reset()
       })

@@ -4,7 +4,7 @@ const Model = require('../models/model')
 
 
 
-describe('---------- `play` ----------', function () {
+xdescribe('---------- `play` ----------', function () {
   beforeEach(function () {
     Model.reset()
   })

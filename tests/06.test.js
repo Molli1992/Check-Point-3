@@ -2,7 +2,7 @@ const expect = require('chai').expect
 
 const Model = require('../models/model')
 
-describe('---------- `rateSerie` ----------', function () {
+xdescribe('---------- `rateSerie` ----------', function () {
   beforeEach(function () {
     Model.reset()
   })
